@@ -1,0 +1,23 @@
+
+
+
+
+<%- include("partials/header") -%>
+
+      <h1>Home</h1>
+      <p> <%= homeData %></p>
+
+
+
+    <%  blogposts.forEach(function(e){%>
+        <h2><%= e.title%></h2>
+        <p><%= e.content.substring(0,100) + " ..."%>
+        <a href="/posts/<%=e._id%>">Read more</a>
+        </p>
+
+      <%})%>
+
+   <div class="bottomdiv">
+     <a href="/compose"><i class="bi bi-plus-circle-fill"></i></a>
+   </div>
+<%- include("partials/footer") -%>
